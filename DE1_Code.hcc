@@ -1,0 +1,25 @@
+set family = AlteraCycloneII;	// Familia de FPGA
+set part = "EP2C20F484C7";	    // Numero de Chip
+set clock = external "L1";		// Reloj Principal 50MHz
+
+
+void main(void)
+{
+	unsigned int 10 dato;				// dato de entrada
+	signal unsigned int 8 LedsG_Salida;	// enlace con el exterior
+
+// Configuración Interruptores (MSB --> LSB)
+interface bus_in (unsigned int 10) Entrada_SW() with
+ { data = {"L2", "M1", "M2", "U11", "U12", "W12", "V12", "M22", "L21","L22"}};
+
+// Configuración LEDs VERDE (MSB --> LSB)
+interface bus_out() LEDSG(signal unsigned int 8 LEDSG_SALIDA = LedsG_Salida) with
+ { data = {"Y21", "Y22", "W21", "W22", "V21", "V22", "U21", "U22"}};
+
+	do
+	{
+		dato = Entrada_SW.in;
+		LedsG_Salida = 0@dato[7:0];
+	} while (1);
+
+}

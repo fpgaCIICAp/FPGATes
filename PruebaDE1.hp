@@ -1,0 +1,50 @@
+#@hp
+type AlteraCyclone
+setting EDIF debug true
+setting EDIF reportXML true
+setting EDIF reportText false
+setting EDIF warnings true
+setting EDIF piperam true
+setting EDIF parfunc false
+setting EDIF parchan false
+setting EDIF parmem false
+setting EDIF rewrite true
+setting EDIF high true
+setting EDIF cse true
+setting EDIF pcse true
+setting EDIF rcse true
+setting EDIF cr true
+setting EDIF rcr false
+setting EDIF balance true
+setting EDIF browse false
+setting EDIF estimate false
+setting EDIF noTimeCon false
+setting EDIF ignoreInclDirs false
+setting EDIF ignoreLibDirs false
+setting EDIF noFastCarry false
+setting EDIF mapper true
+setting EDIF useCustomBuild false
+setting EDIF exclude false
+setting EDIF vlog2001 false
+setting EDIF target edif
+setting EDIF target.compile none
+setting EDIF family AlteraCycloneII
+setting EDIF family.lib none
+setting EDIF vTool ActiveHDL
+setting EDIF netExp speed
+setting EDIF device none
+setting EDIF package none
+setting EDIF speed none
+setting EDIF aluMapping false
+setting EDIF define:NDEBUG true
+setting EDIF define:__EDIF__ true
+setting EDIF define:__ELIXML__ false
+setting EDIF define:HANDELCV3 false
+setting EDIF define:SIMULATE false
+setting EDIF define:DEBUG false
+setting EDIF define:__VHDL__ false
+setting EDIF define:__VERILOG__ false
+setting EDIF define:__SYSTEMC__ false
+document ..\\de1_code.hcc {
+    type hcc
+}
