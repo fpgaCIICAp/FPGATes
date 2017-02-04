@@ -1,6 +1,6 @@
 set family = AlteraCycloneII;	// Familia de FPGA
 set part = "EP2C20F484C7";	    // Numero de Chip
-set clock = external "L1";		// Reloj Principal 50MHz
+set clock = external "L1";		// Reloj Principal 50MHzeste cambio es una prueba
 
 
 void main(void)
