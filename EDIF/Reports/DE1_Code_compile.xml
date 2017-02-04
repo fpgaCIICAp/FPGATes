@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- !DOCTYPE report SYSTEM "report.dtd" -->
+
+<!-- *********************************************************************
+     *          Celoxica Hardware Compiler - Compilation Report          *
+     ********************************************************************* -->
+
+<!-- XSLT
+<?xml-stylesheet type="application/xml" href="report.xsl"?>
+Microsoft requires fictional stylesheet type "text/xsl"
+The type "application/xslt+xml" may be registered later
+-->
+<?xml-stylesheet type="text/xsl" href="file://D:/Archivos%20de%20programa/Celoxica/DK/Stylesheets/report.xsl"?>
+<!-- The URL for a Windows drive may have a pipe ('|') rather than a colon (':') -->
+<!-- However, Apache Xalan (v1.8.0) objects to the pipe ('|') character -->
+<report>
+<name value="DE1_Code_compile"/>
+<blocks>
+<block desc="ALU" index="0"/>
+<block desc="Actel FGEN" index="1"/>
+<block desc="Actel MemMux" index="2"/>
+<block desc="Add" index="3"/>
+<block desc="Altera LCell" index="4"/>
+<block desc="And" index="5"/>
+<block desc="Async RAM Buffer" index="6"/>
+<block desc="Buffer" index="7"/>
+<block desc="Carry Buffer" index="8"/>
+<block desc="Carry Look-ahead Adder (CLAdd)" index="9"/>
+<block desc="Carry Look-ahead Gen (CLGen)" index="10"/>
+<block desc="Carry Sum" index="11"/>
+<block desc="Channel" index="12"/>
+<block desc="Clock" index="13"/>
+<block desc="Clock Buffer" index="14"/>
+<block desc="Clock Divider" index="15"/>
+<block desc="Clock Inverter" index="16"/>
+<block desc="Compare" index="17"/>
+<block desc="Constant" index="18"/>
+<block desc="Constant Divide" index="19"/>
+<block desc="Constant Modulus" index="20"/>
+<block desc="Constant Multiply" index="21"/>
+<block desc="Control" index="22"/>
+<block desc="Decode" index="23"/>
+<block desc="Differential Clock Buffer" index="24"/>
+<block desc="Differential Input Buffer" index="25"/>
+<block desc="Differential Output Buffer" index="26"/>
+<block desc="Differential Tri-state Buffer" index="27"/>
+<block desc="Divide" index="28"/>
+<block desc="Flip-flop" index="29"/>
+<block desc="Full Adder (FA)" index="30"/>
+<block desc="Input Buffer" index="31"/>
+<block desc="Input Channel" index="32"/>
+<block desc="Input Flip-flop" index="33"/>
+<block desc="Input Pad" index="34"/>
+<block desc="Interface" index="35"/>
+<block desc="LUT" index="36"/>
+<block desc="Memory - Multiport" index="37"/>
+<block desc="Memory - RAM" index="38"/>
+<block desc="Memory - ROM" index="39"/>
+<block desc="Memory - WOM" index="40"/>
+<block desc="Modulus" index="41"/>
+<block desc="Multiplexor" index="42"/>
+<block desc="Multiply" index="43"/>
+<block desc="Negate" index="44"/>
+<block desc="Not" index="45"/>
+<block desc="One Place Buffer" index="46"/>
+<block desc="Or" index="47"/>
+<block desc="Output Buffer" index="48"/>
+<block desc="Output Channel" index="49"/>
+<block desc="Output Pad" index="50"/>
+<block desc="Pointer Control" index="51"/>
+<block desc="Pull Down" index="52"/>
+<block desc="Pull Up" index="53"/>
+<block desc="RAM Buffer" index="54"/>
+<block desc="Register" index="55"/>
+<block desc="Rotate Left" index="56"/>
+<block desc="Rotate Right" index="57"/>
+<block desc="Shift Left" index="58"/>
+<block desc="Shift Right" index="59"/>
+<block desc="Subtract" index="60"/>
+<block desc="Tri-state Buffer" index="61"/>
+<block desc="Tri-state Pad" index="62"/>
+<block desc="While 1" index="63"/>
+<block desc="Xilinx MUX" index="64"/>
+<block desc="Xilinx MultAnd" index="65"/>
+<block desc="Xilinx MultAndMux" index="66"/>
+<block desc="Xilinx MuxCY" index="67"/>
+<block desc="Xilinx SRL16" index="68"/>
+<block desc="Xilinx XorCY" index="69"/>
+<block desc="Xor" index="70"/>
+<block desc="[Other]" index="71"/>
+</blocks>
+<section title="">
+<section title="Compiler and Environment">
+<message type="environment" cputimer-text="0.015">
+<key>
+<datum type="text">Celoxica Hardware Compiler</datum>
+</key>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">built for</datum>
+</key>
+<value>
+<datum type="text">Windows</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">version</datum>
+</key>
+<value>
+<datum type="text">3.5.2841</datum>
+</value>
+</message>
+</message>
+<message type="environment" cputimer-text="0.015">
+<key>
+<datum type="text">Environment</datum>
+</key>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O/S</datum>
+</key>
+<value>
+<datum type="text">Windows XP Service Pack 3</datum>
+</value>
+</message>
+</message>
+<message type="environment" cputimer-text="0.015">
+<key>
+<datum type="text">Report</datum>
+</key>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">Timestamp</datum>
+</key>
+<value>
+<datum type="text">2015.11.05 13:00:34</datum>
+</value>
+</message>
+</message>
+<message type="environment" code="I6" cputimer-text="0.015">
+<key>
+<datum type="text">Parameters</datum>
+</key>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">c</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">g</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">W</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">N+piperam</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">S-parfunc</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">S-parchan</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">S-parmem</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+rewrite</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+high</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+cse</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+pcse</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+rcse</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+cr</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O-rcr</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">O+balance</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">lutpack</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">edif</datum>
+</key>
+<value>
+<datum type="text">&lt;no param&gt;</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">D</datum>
+</key>
+<value>
+<datum type="text">NDEBUG</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">D</datum>
+</key>
+<value>
+<datum type="text">__EDIF__</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">I</datum>
+</key>
+<value>
+<datum type="text">D:\Archivos de programa\Celoxica\PDK\Hardware\Include</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">o</datum>
+</key>
+<value>
+<datum type="text">C:\FPGA\DE1\PruebaDE1\EDIF\DE1_Code.hco</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">Rx</datum>
+</key>
+<value>
+<datum type="text">C:\FPGA\DE1\PruebaDE1\EDIF\Reports\DE1_Code_compile.xml</datum>
+</value>
+</message>
+<message cputimer-text="0.015">
+<key>
+<datum type="text">xc</datum>
+</key>
+<value>
+<datum type="text">C:\FPGA\DE1\DE1_Code.hcc</datum>
+</value>
+</message>
+</message>
+</section>
+<section title="Files">
+<section title="&quot;DE1_Code&quot;">
+<message type="info" code="I4" cputimer-text="0.093">
+<key>
+<datum type="text">Filename</datum>
+</key>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Path</datum>
+</key>
+<value>
+<datum type="text">C:\FPGA\DE1\</datum>
+</value>
+</message>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Path URL</datum>
+</key>
+<value>
+<datum type="text">C:/FPGA/DE1/</datum>
+</value>
+</message>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Abs Path</datum>
+</key>
+<value>
+<datum type="text">C:\FPGA\DE1\</datum>
+</value>
+</message>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Abs Path URL</datum>
+</key>
+<value>
+<datum type="text">file://C:/FPGA/DE1/</datum>
+</value>
+</message>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Base</datum>
+</key>
+<value>
+<datum type="text">DE1_Code</datum>
+</value>
+</message>
+<message type="info" cputimer-text="0.093">
+<key>
+<datum type="text">Ext</datum>
+</key>
+<value>
+<datum type="text">.hcc</datum>
+</value>
+</message>
+</message>
+<message type="info" code="I5" cputimer-text="0.093">
+<key>
+<datum type="text">File Type</datum>
+</key>
+<value>
+<datum type="text">Source (HCC)</datum>
+</value>
+</message>
+</section>
+</section>
+<section title="Analysis">
+</section>
+<message type="info" code="I3" cputimer-text="0.265">
+<key>
+<datum type="text">Error status</datum>
+</key>
+<message cputimer-text="0.265">
+<key>
+<datum type="text">Errors</datum>
+</key>
+<value>
+<datum type="number_ul" value="0"/></value>
+</message>
+<message cputimer-text="0.265">
+<key>
+<datum type="text">Warnings</datum>
+</key>
+<value>
+<datum type="number_ul" value="0"/></value>
+</message>
+</message>
+</section>
+</report>

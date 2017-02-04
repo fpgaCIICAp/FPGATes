@@ -1,0 +1,15 @@
+--------------------Configuration: PruebaDE1 - EDIF--------------------
+
+¬DE1_Code.hcc
+Handel-C Compiler "-c" "-g" "-W" "-N+piperam" "-S-parfunc" "-S-parchan" "-S-parmem" "-O+rewrite" "-O+high" "-O+cse" "-O+pcse" "-O+rcse" "-O+cr" "-O-rcr" "-O+balance" "-lutpack" "-edif" "-DNDEBUG" "-D__EDIF__" "-I" "D:\Archivos de programa\Celoxica\PDK\Hardware\Include" "-o" "C:\FPGA\DE1\PruebaDE1\EDIF\DE1_Code.hco" "-Rx" "C:\FPGA\DE1\PruebaDE1\EDIF\Reports\DE1_Code_compile.xml" "-xc" "C:\FPGA\DE1\DE1_Code.hcc"
+      0 errors, 0 warnings
+
+¬PruebaDE1
+Linker "-g" "-W" "-N+piperam" "-S-parfunc" "-S-parchan" "-S-parmem" "-O+rewrite" "-O+high" "-O+cse" "-O+pcse" "-O+rcse" "-O+cr" "-O-rcr" "-O+balance" "-lutpack" "-edif" "-f" "AlteraCycloneII" "-syn" "ActiveHDL" "-N+speed" "-N-alumap" "-L" "D:\Archivos de programa\Celoxica\PDK\Hardware\Lib" "-o" "C:\FPGA\DE1\PruebaDE1\EDIF\PruebaDE1.edf" "-Rx" "C:\FPGA\DE1\PruebaDE1\EDIF\Reports\PruebaDE1_link.xml" "EDIF\DE1_Code.hco"
+  NAND gates after compilation  : 96 (15 FFs, 0 memory bits)
+  NAND gates after optimisation : 94 (15 FFs, 0 memory bits)
+  NAND gates after expansion    : 88 (14 FFs, 0 memory bits)
+  NAND gates after optimisation : 68 (11 FFs, 0 memory bits)
+  LUTs after mapping            : 1 (11 FFs, 0 memory bits)
+  LUTs after post-optimisation  : 1 (11 FFs, 0 memory bits)
+      0 errors, 0 warnings

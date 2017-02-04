@@ -1,0 +1,328 @@
+(edif PruebaDE1
+ (edifVersion 2 0 0)
+ (edifLevel 0)
+ (keywordMap
+  (keywordLevel 0)
+ )
+ (status
+  (written
+   (timestamp 2015 11 5 13 0 35)
+   (program "Celoxica Hardware Compiler"
+    (version "Version 3.5.2841")
+   )
+  )
+ )
+ (library PruebaDE1_lib
+  (edifLevel 0)
+  (technology
+   (numberDefinition
+   )
+  )
+  (cell GLOBAL
+   (cellType GENERIC)
+   (view view1
+    (viewType NETLIST)
+    (interface
+     (port IN (direction INPUT))
+     (port OUT (direction OUTPUT))
+    )
+   )
+  )
+  (cell DFFE
+   (cellType GENERIC)
+   (view view1
+    (viewType NETLIST)
+    (interface
+     (port CLK (direction INPUT))
+     (port CLRN (direction INPUT))
+     (port D (direction INPUT))
+     (port ENA (direction INPUT))
+     (port PRN (direction INPUT))
+     (port Q (direction OUTPUT))
+    )
+   )
+  )
+  (cell SOFT
+   (cellType GENERIC)
+   (view view1
+    (viewType NETLIST)
+    (interface
+     (port IN (direction INPUT))
+     (port OUT (direction OUTPUT))
+    )
+   )
+  )
+  (cell cycloneii_lcell_comb
+   (cellType GENERIC)
+   (view view1
+    (viewType NETLIST)
+    (interface
+     (port cin (direction INPUT))
+     (port dataa (direction INPUT))
+     (port datab (direction INPUT))
+     (port datac (direction INPUT))
+     (port datad (direction INPUT))
+     (port sharein (direction INPUT))
+     (port combout (direction OUTPUT))
+     (port cout (direction OUTPUT))
+    )
+   )
+  )
+  (cell PruebaDE1
+   (cellType GENERIC)
+   (view view1
+    (viewType NETLIST)
+    (interface
+     (port PIN_L1 (direction INPUT))
+     (port PIN_L2 (direction INPUT))
+     (port PIN_L21 (direction INPUT))
+     (port PIN_L22 (direction INPUT))
+     (port PIN_M1 (direction INPUT))
+     (port PIN_M2 (direction INPUT))
+     (port PIN_M22 (direction INPUT))
+     (port PIN_U11 (direction INPUT))
+     (port PIN_U12 (direction INPUT))
+     (port PIN_V12 (direction INPUT))
+     (port PIN_W12 (direction INPUT))
+     (port PIN_U21 (direction OUTPUT))
+     (port PIN_U22 (direction OUTPUT))
+     (port PIN_V21 (direction OUTPUT))
+     (port PIN_V22 (direction OUTPUT))
+     (port PIN_W21 (direction OUTPUT))
+     (port PIN_W22 (direction OUTPUT))
+     (port PIN_Y21 (direction OUTPUT))
+     (port PIN_Y22 (direction OUTPUT))
+    )
+    (contents
+     (instance B2_DE1_Code_hcc_3_CLKBUF (viewRef view1 (cellRef GLOBAL)))
+     (instance B3_DE1_Code_hcc_7_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B1_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B2_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B3_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B4_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B5_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B6_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B7_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B8_DE1_Code_hcc_8_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B19_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B20_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B21_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B22_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B23_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B24_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B25_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B26_DE1_Code_hcc_12_main_IBUF (viewRef view1 (cellRef SOFT)))
+     (instance B35_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B36_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B37_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B38_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B39_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B40_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B41_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B42_DE1_Code_hcc_16_main_OBUF (viewRef view1 (cellRef SOFT)))
+     (instance B43_DE1_Code_hcc_19_main_LCell4 (viewRef view1 (cellRef cycloneii_lcell_comb))
+      (property LUT_MASK (string "bbbb"))
+      (property SUM_LUTC_INPUT (string "datac"))
+      )
+     (instance B44_DE1_Code_hcc_21_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (instance B45_DE1_Code_hcc_22_main_DTYPE0IR (viewRef view1 (cellRef DFFE)))
+     (net VCC (joined
+      (portRef D (instanceRef B3_DE1_Code_hcc_7_DTYPE0IR))
+      (portRef ENA (instanceRef B3_DE1_Code_hcc_7_DTYPE0IR))
+      (portRef CLRN (instanceRef B3_DE1_Code_hcc_7_DTYPE0IR))
+      (portRef CLRN (instanceRef B1_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B2_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B3_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B4_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B5_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B6_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B7_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B8_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B44_DE1_Code_hcc_21_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B44_DE1_Code_hcc_21_main_DTYPE0IR))
+      (portRef ENA (instanceRef B45_DE1_Code_hcc_22_main_DTYPE0IR))
+      (portRef CLRN (instanceRef B45_DE1_Code_hcc_22_main_DTYPE0IR))
+      ))
+     (net ClockInput (joined
+      (portRef OUT (instanceRef B2_DE1_Code_hcc_3_CLKBUF))
+      (portRef CLK (instanceRef B3_DE1_Code_hcc_7_DTYPE0IR))
+      (portRef CLK (instanceRef B1_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B2_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B3_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B4_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B5_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B6_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B7_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B8_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef CLK (instanceRef B44_DE1_Code_hcc_21_main_DTYPE0IR))
+      (portRef CLK (instanceRef B45_DE1_Code_hcc_22_main_DTYPE0IR))
+      ))
+     (net BodyStart (joined
+      (portRef ENA (instanceRef B1_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B2_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B3_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B4_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B5_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B6_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B7_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef ENA (instanceRef B8_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef combout (instanceRef B43_DE1_Code_hcc_19_main_LCell4))
+      (portRef D (instanceRef B44_DE1_Code_hcc_21_main_DTYPE0IR))
+      ))
+     (net BodyEnd (joined
+      (portRef dataa (instanceRef B43_DE1_Code_hcc_19_main_LCell4))
+      (portRef Q (instanceRef B45_DE1_Code_hcc_22_main_DTYPE0IR))
+      ))
+     (net SeqChain (joined
+      (portRef Q (instanceRef B44_DE1_Code_hcc_21_main_DTYPE0IR))
+      (portRef D (instanceRef B45_DE1_Code_hcc_22_main_DTYPE0IR))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_0_U22 (joined
+      (portRef PIN_U22)
+      (portRef OUT (instanceRef B42_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_1_U21 (joined
+      (portRef PIN_U21)
+      (portRef OUT (instanceRef B41_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_2_V22 (joined
+      (portRef PIN_V22)
+      (portRef OUT (instanceRef B40_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_3_V21 (joined
+      (portRef PIN_V21)
+      (portRef OUT (instanceRef B39_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_4_W22 (joined
+      (portRef PIN_W22)
+      (portRef OUT (instanceRef B38_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_5_W21 (joined
+      (portRef PIN_W21)
+      (portRef OUT (instanceRef B37_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_6_Y22 (joined
+      (portRef PIN_Y22)
+      (portRef OUT (instanceRef B36_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADOUT_LEDSG_LEDSG_SALIDA_7_Y21 (joined
+      (portRef PIN_Y21)
+      (portRef OUT (instanceRef B35_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net W26_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B1_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B26_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W25_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B2_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B25_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W24_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B3_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B24_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W23_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B4_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B23_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W22_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B5_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B22_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W21_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B6_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B21_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W20_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B7_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B20_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net W19_DE1_Code_hcc_12_main_OUT (joined
+      (portRef D (instanceRef B8_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef OUT (instanceRef B19_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_0_L22 (joined
+      (portRef PIN_L22)
+      (portRef IN (instanceRef B26_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_1_L21 (joined
+      (portRef PIN_L21)
+      (portRef IN (instanceRef B25_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_2_M22 (joined
+      (portRef PIN_M22)
+      (portRef IN (instanceRef B24_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_3_V12 (joined
+      (portRef PIN_V12)
+      (portRef IN (instanceRef B23_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_4_W12 (joined
+      (portRef PIN_W12)
+      (portRef IN (instanceRef B22_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_5_U12 (joined
+      (portRef PIN_U12)
+      (portRef IN (instanceRef B21_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_6_U11 (joined
+      (portRef PIN_U11)
+      (portRef IN (instanceRef B20_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net PADIN_Entrada_SW_in_7_M2 (joined
+      (portRef PIN_M2)
+      (portRef IN (instanceRef B19_DE1_Code_hcc_12_main_IBUF))
+      ))
+     (net dato_0 (joined
+      (portRef Q (instanceRef B1_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B42_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_1 (joined
+      (portRef Q (instanceRef B2_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B41_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_2 (joined
+      (portRef Q (instanceRef B3_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B40_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_3 (joined
+      (portRef Q (instanceRef B4_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B39_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_4 (joined
+      (portRef Q (instanceRef B5_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B38_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_5 (joined
+      (portRef Q (instanceRef B6_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B37_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_6 (joined
+      (portRef Q (instanceRef B7_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B36_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net dato_7 (joined
+      (portRef Q (instanceRef B8_DE1_Code_hcc_8_main_DTYPE0IR))
+      (portRef IN (instanceRef B35_DE1_Code_hcc_16_main_OBUF))
+      ))
+     (net PADIN_ClockInPin_0_L1 (joined
+      (portRef PIN_L1)
+      (portRef IN (instanceRef B2_DE1_Code_hcc_3_CLKBUF))
+      ))
+     (net WG3_DE1_Code_hcc_7_Q (joined
+      (portRef Q (instanceRef B3_DE1_Code_hcc_7_DTYPE0IR))
+      (portRef datab (instanceRef B43_DE1_Code_hcc_19_main_LCell4))
+      ))
+    )
+   )
+  )
+ )
+ (design PruebaDE1
+  (cellRef PruebaDE1
+   (libraryRef PruebaDE1_lib)
+  )
+  (property PART
+   (string "EP2C20F484C7")
+  )
+ )
+)
